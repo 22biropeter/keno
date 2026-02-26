@@ -1,0 +1,206 @@
+﻿<Window x:Class="keno.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Keno" Height="500" Width="900"
+        Background="White">
+
+    <Grid Margin="10,10,10,10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="438"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Margin="5,5,5,5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" Margin="0,5,0,5">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+
+                <ListBox SelectionChanged="lbSzelvenyek_SelectionChanged" x:Name="lbSzelvenyek" Grid.Column="0" Background="Beige">
+                </ListBox>
+
+        
+                <Grid Grid.Column="1" Margin="5,0,0,0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Button Content="Napi sorsolás"
+                           FontSize="11"
+                           HorizontalAlignment="Left" RenderTransformOrigin="0.627,-1.388" Margin="-63,-45,0,290" Width="128"
+                           Click="Sorsolas"/>
+
+                    <ListBox x:Name="lbRandom" Grid.Row="1" Background="Beige" >
+                    </ListBox>
+                </Grid>
+
+            </Grid>
+
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Content="Szelvények betöltése" Margin="0,0,135,5"
+                    Click="LoadBtn"/>
+        </Grid>
+
+        <Grid x:Name="lbSzamok" Width="350px" Height="350px" Grid.Column="1" Grid.Row="0" Margin="10,10,10,10"
+              Background="LightGreen">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="1"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="2"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="3"/>
+            <Label Grid.Row="0" Grid.Column="3" Content="4"/>
+            <Label Grid.Row="0" Grid.Column="4" Content="5"/>
+            <Label Grid.Row="0" Grid.Column="5" Content="6"/>
+            <Label Grid.Row="0" Grid.Column="6" Content="7"/>
+            <Label Grid.Row="0" Grid.Column="7" Content="8"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="9"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="10"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="11"/>
+            <Label Grid.Row="1" Grid.Column="3" Content="12"/>
+            <Label Grid.Row="1" Grid.Column="4" Content="13"/>
+            <Label Grid.Row="1" Grid.Column="5" Content="14"/>
+            <Label Grid.Row="1" Grid.Column="6" Content="15"/>
+            <Label Grid.Row="1" Grid.Column="7" Content="16"/>
+
+            <Label Grid.Row="2" Grid.Column="0" Content="17"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="18"/>
+            <Label Grid.Row="2" Grid.Column="2" Content="19"/>
+            <Label Grid.Row="2" Grid.Column="3" Content="20"/>
+            <Label Grid.Row="2" Grid.Column="4" Content="21"/>
+            <Label Grid.Row="2" Grid.Column="5" Content="22"/>
+            <Label Grid.Row="2" Grid.Column="6" Content="23"/>
+            <Label Grid.Row="2" Grid.Column="7" Content="24"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="25"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="26"/>
+            <Label Grid.Row="3" Grid.Column="2" Content="27"/>
+            <Label Grid.Row="3" Grid.Column="3" Content="28"/>
+            <Label Grid.Row="3" Grid.Column="4" Content="29"/>
+            <Label Grid.Row="3" Grid.Column="5" Content="30"/>
+            <Label Grid.Row="3" Grid.Column="6" Content="31"/>
+            <Label Grid.Row="3" Grid.Column="7" Content="32"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="33"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="34"/>
+            <Label Grid.Row="4" Grid.Column="2" Content="35"/>
+            <Label Grid.Row="4" Grid.Column="3" Content="36"/>
+            <Label Grid.Row="4" Grid.Column="4" Content="37"/>
+            <Label Grid.Row="4" Grid.Column="5" Content="38"/>
+            <Label Grid.Row="4" Grid.Column="6" Content="39"/>
+            <Label Grid.Row="4" Grid.Column="7" Content="40"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Content="41"/>
+            <Label Grid.Row="5" Grid.Column="1" Content="42"/>
+            <Label Grid.Row="5" Grid.Column="2" Content="43"/>
+            <Label Grid.Row="5" Grid.Column="3" Content="44"/>
+            <Label Grid.Row="5" Grid.Column="4" Content="45"/>
+            <Label Grid.Row="5" Grid.Column="5" Content="46"/>
+            <Label Grid.Row="5" Grid.Column="6" Content="47"/>
+            <Label Grid.Row="5" Grid.Column="7" Content="48"/>
+
+            <Label Grid.Row="6" Grid.Column="0" Content="49"/>
+            <Label Grid.Row="6" Grid.Column="1" Content="50"/>
+            <Label Grid.Row="6" Grid.Column="2" Content="51"/>
+            <Label Grid.Row="6" Grid.Column="3" Content="52"/>
+            <Label Grid.Row="6" Grid.Column="4" Content="53"/>
+            <Label Grid.Row="6" Grid.Column="5" Content="54"/>
+            <Label Grid.Row="6" Grid.Column="6" Content="55"/>
+            <Label Grid.Row="6" Grid.Column="7" Content="56"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Content="57"/>
+            <Label Grid.Row="7" Grid.Column="1" Content="58"/>
+            <Label Grid.Row="7" Grid.Column="2" Content="59"/>
+            <Label Grid.Row="7" Grid.Column="3" Content="60"/>
+            <Label Grid.Row="7" Grid.Column="4" Content="61"/>
+            <Label Grid.Row="7" Grid.Column="5" Content="62"/>
+            <Label Grid.Row="7" Grid.Column="6" Content="63"/>
+            <Label Grid.Row="7" Grid.Column="7" Content="64"/>
+
+            <!-- Row 8 -->
+            <Label Grid.Row="8" Grid.Column="0" Content="65"/>
+            <Label Grid.Row="8" Grid.Column="1" Content="66"/>
+            <Label Grid.Row="8" Grid.Column="2" Content="67"/>
+            <Label Grid.Row="8" Grid.Column="3" Content="68"/>
+            <Label Grid.Row="8" Grid.Column="4" Content="69"/>
+            <Label Grid.Row="8" Grid.Column="5" Content="70"/>
+            <Label Grid.Row="8" Grid.Column="6" Content="71"/>
+            <Label Grid.Row="8" Grid.Column="7" Content="72"/>
+
+            <Label Grid.Row="9" Grid.Column="0" Content="73"/>
+            <Label Grid.Row="9" Grid.Column="1" Content="74"/>
+            <Label Grid.Row="9" Grid.Column="2" Content="75"/>
+            <Label Grid.Row="9" Grid.Column="3" Content="76"/>
+            <Label Grid.Row="9" Grid.Column="4" Content="77"/>
+            <Label Grid.Row="9" Grid.Column="5" Content="78"/>
+            <Label Grid.Row="9" Grid.Column="6" Content="79"/>
+            <Label Grid.Row="9" Grid.Column="7" Content="80"/>
+
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.ColumnSpan="2"
+              Grid.Row="1" Margin="5,5,5,5">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Szorzó: X"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="14"
+                   x:Name="lbSLabel"/>
+
+            <Label Grid.Column="1"
+                   Content="Nyeremény: XXXX"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Foreground="Red"
+                   x:Name="lbNLabel"/>
+        </Grid>
+
+    </Grid>
+</Window>
